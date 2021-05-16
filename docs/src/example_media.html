@@ -17,14 +17,6 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mp3-player/audio.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-diy/diy.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -284,27 +276,23 @@
                                 
                                 <p>sol mi re mi re do&#xFF0C;do la sol<br>sol sol mi la sol&#xFF0C;re mi re do la re<br>la la so mi&#xFF0C;re mi do la so<br>so so mi la so&#xFF0C;re mi re do la do<br>la la so mi&#xFF0C;re mi do la so<br>so so mi la so&#xFF0C;re mi re&#xFF0C;do la do    </p>
 <p>ssss</p>
-<p><img src="images/ttt.jpg" onclick="document.getElementById(&apos;aimg-c2f59cb525ed6&apos;).play()"><br><audio id="aimg-c2f59cb525ed6"><source src="images/1.mp3">images/1.mp3</audio></p>
-<div id="audio-list--------" style="display:none">
-
-
-[
+<p>add plugins in book.json</p>
+<pre><code>{
+  &quot;plugins&quot;: [&quot;mp3-player&quot;, 
+              &quot;diy&quot;, 
+              &quot;audio_image&quot;]
+}
+</code></pre><pre><code>{% aimg %}images/ttt.jpg,images/1.mp3{% endaimg %}
+</code></pre><pre><code class="lang-mp3">[
  {
    title: &quot;AAA&quot;,
    cover: &quot;images/ttt.jpg&quot;,
    mp3: &quot;images/1.mp3&quot;,
  }
 ]
-</div>
-
-
-
-<iframe id="iframe" width="100%" height="500" allowtransparency="true" src="https://youtu.be/pN1AJmwqxUY" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-
-
-
-
-
+</code></pre>
+<pre><code>{iframe}(https://youtu.be/pN1AJmwqxUY)
+</code></pre>
                                 
                                 </section>
                             
@@ -343,7 +331,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"example","level":"1.6","depth":1,"previous":{"title":"section3.2","level":"1.5.2","depth":2,"path":"src/chapter3/section3.2.md","ref":"src/chapter3/section3.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mp3-player","diy","audio_image","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"diy":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"mp3-player":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/example_media.md","mtime":"2021-05-16T22:07:41.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-16T22:13:11.456Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"example","level":"1.6","depth":1,"previous":{"title":"section3.2","level":"1.5.2","depth":2,"path":"src/chapter3/section3.2.md","ref":"src/chapter3/section3.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/example_media.md","mtime":"2021-05-16T22:30:35.909Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-16T22:30:47.401Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -351,18 +339,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-mp3-player/jquery-3.2.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-mp3-player/jquery-ui.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-mp3-player/audio.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
