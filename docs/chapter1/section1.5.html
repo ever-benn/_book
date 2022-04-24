@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Section1.5 - have-ever-been</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">Intro</a></li><li class="chapter-item expanded "><a href="../chapter0.html">Chapter 0</a></li><li class="chapter-item expanded "><a href="../chapter1/index.html">Chapter1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter1/section1.1.html">Section1.1</a></li><li class="chapter-item expanded "><a href="../chapter1/section1.2.html">Section1.2</a></li><li class="chapter-item expanded "><a href="../chapter1/section1.3.html">Section1.3</a></li><li class="chapter-item expanded "><a href="../chapter1/section1.4.html">Section1.4</a></li><li class="chapter-item expanded "><a href="../chapter1/section1.5.html" class="active">Section1.5</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter2/index.html">Chapter2</a></li><li class="chapter-item expanded "><a href="../chapter3/index.html">chapter3</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter3/section3.1.html">section3.1</a></li><li class="chapter-item expanded "><a href="../chapter3/section3.2.html">section3.2</a></li></ol></li><li class="chapter-item expanded "><a href="../example_media.html">example</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">have-ever-been</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" type="text/css" href="../auto-number-title.css" />
+<h1 id="section-15"><a class="header" href="#section-15">Section 1.5</a></h1>
+<h2 id=""><a class="header" href="#"></a></h2>
+<p>亚马逊退出中国了，前些年大家说什么“kindle富一生”，现在也成了知乎上人人喊打的消费主义陷阱。大家纷纷开始用起了微信读书、网易阅读这些。不知道你的kindle还有没有继续用，还是在吃灰。现在有时候有的书想看，但是亚马逊上面不太存在。</p>
+<p>我想不起来我送你的东西了，好像除了刚来德国的时候，托朋友给你带了点小东西，我也只有那个kindle在你那里了吧。你记不记得那个八音盒，可能就那个八音盒有点想再拿给你。我觉得那个八音盒挺好看的，我很喜欢，想让它留在你那里。那个好像是我送你的第一个生日礼物。我记得你不太喜欢那个礼物好像，但是我挺喜欢的。我记得那个八音盒还有一些不愉快的记忆，我们闹得挺不开心的。但是不愉快的，就不管它了罢。后来我看了聊天记录我才发现，原来我又寄给你了。再后来，某一天你生气的跟我说我的东西你都要扔了，不知道你有没有真的扔了。</p>
+<h2 id="-1"><a class="header" href="#-1"></a></h2>
+<p>多少年过去了，我的朋友，我们分手的时常超过了我们在一起的时间了。我还是几乎每天都会想起你来，这么多年过去了我还是不肯忘记你。是啊，我是个有一些没有出息的人。李志有首歌，想起了她，反反复复地只是在不断的重复，想起了她，想起了她。</p>
+<p>我一件事情都不想忘记，一开始的时候我们的过去一点一滴我非但没有淡忘过去，反而更加的清晰了起来。我不厌其烦的回忆，不厌其烦地在聊天时把话题引到你身上，不厌其烦的跟一个又一个人提起你来。但是我也不能抵御时间，“上帝的磨盘转的很慢，但是磨得很细。”。我能感觉到你在我从我的世界里面缓慢的剥落，就像壁画从墙上剥落，一开始不见了颜色，然后渐渐的一块一块掉下来。我也是个执拗的人，越是剥落越是不肯放弃。忘记的多了，想的甚至变得越发的浓烈了。</p>
+<p>我常想如果有一天我真的忘却你了，我不会开启新的生活，我会去死吧。我早就应该死去了，我应该在我们分手的那一天死去了。你跟我说你要跟别人在一起的时候我那么平静，我当时应该静静的走到身后的窗户那里纵身一跃，这样才完整。</p>
+<p>你觉得不放弃讽刺吗？你觉得这种执念荒诞吗？你当然有资格对我不屑一顾。我做了什么呢？我为你，或者，为我们曾经的感情做过什么呢？我经常还会看一看我们的聊天记录，微信的聊天记录，在那前夕，你一直跟我说的，而我，我表现得怎么样呢？想到这些我更觉得我没有必要活着了，我会死，我应该死，我是个彻头彻尾的失败的人。</p>
+<p>我想我就要死了，我一年比一年想死去了，“恨不当日死，留作今日羞”。我已经不再像原来那样跟朋友讲这些纠结的话了，我想我会一个人静静的死去的。我每天睡前都在想我死前应不应该给你打个电话，我死前是不是应该再去北京看看你。我的事情委托给谁来处理，我怎么告诉我父母。我像我会死的，我想我很快就要死了，朋友，新的生命出世了，旧的生命应该死去。</p>
+<p>“磐石无转移”啊，“蒲苇韧如丝”。哈哈哈哈“卿当日胜贵”，“吾独向黄泉”。实在是不想祝福你，我也希望你幸福，希望你快乐，但是少我一个人祝福也不影响吧。大概只有死前才愿意祝你跟别人过上幸福的生活吧，或者死前的时候，也不愿意吧。</p>
+<h2 id="-2"><a class="header" href="#-2"></a></h2>
+<p>s</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter1/section1.4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../chapter2/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter1/section1.4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../chapter2/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
